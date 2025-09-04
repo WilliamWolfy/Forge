@@ -6,7 +6,9 @@
 set -euo pipefail
 
 # --- Defaults ---
-PROJECT_NAME="forge"
+PROJECT_NAME="Forge"
+GITHUB_CREATOR="WilliamWolfy"
+$BRANCH="main"
 BASE_DIR="$(cd "$(dirname "$0")" && pwd)"
 PROJECT_DIR="$BASE_DIR/$PROJECT_NAME"
 
@@ -55,7 +57,7 @@ PROJECT_DIR="$BASE_DIR/$PROJECT_NAME"
 mkdir -p "$PROJECT_DIR/core" "$PROJECT_DIR/lang" "$PROJECT_DIR/modules" "$PROJECT_DIR/templates"
 
 # --- Remote repo (placeholder) ---
-REMOTE_BASE="https://example.com/$PROJECT_NAME"
+REMOTE_BASE="https://raw.githubusercontent.com/$GITHUB_CREATOR/$PROJECT_NAME/refs/heads/$BRANCH"
 TEMPLATE_DIR="$BASE_DIR/templates"
 
 echo "🔧 Bootstrapping project: $PROJECT_NAME ..."
