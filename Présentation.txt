@@ -1,0 +1,98 @@
+# 🔥 Forge — Bootstrap & Gestion de projets automatisée
+
+**Forge** est un outil simple et puissant pour créer, initialiser et organiser rapidement de nouveaux projets.
+Il fournit une structure prête à l’emploi, des scripts essentiels et un système flexible permettant à chacun d’ajouter ses propres outils, modèles ou automatisations.
+
+---
+
+## 🚀 Fonctionnalités principales
+
+* **Bootstrap instantané**
+  En une commande, Forge génère l’arborescence de base d’un projet :
+
+  ```
+  core/        → utilitaires système
+  lang/        → fichiers de traduction
+  modules/     → modules additionnels
+  templates/   → modèles personnalisés
+  ```
+
+  ainsi que des fichiers essentiels (`README.md`, `.gitignore`, `forge.sh`...).
+
+* **Multi-plateforme**
+  Fonctionne aussi bien sur **Linux**, **macOS** que **Windows** grâce à des scripts adaptés à chaque environnement.
+
+* **Installation automatique**
+  Forge crée un alias global ou local (`forge`) permettant de lancer directement la commande :
+
+  ```bash
+  forge init my-app
+  forge help
+  forge version
+  ```
+
+* **Gestion flexible des templates**
+  Les fichiers peuvent provenir :
+
+  * d’un dépôt distant (URL),
+  * de modèles locaux placés dans `templates/`,
+  * ou d’un fallback minimal intégré.
+
+* **Mise à jour simple**
+  Relancez `forge-bootstrap.sh --update` pour rafraîchir les fichiers et récupérer les derniers modèles.
+
+---
+
+## 🔧 Exemples d’utilisation
+
+Créer un projet nommé **my-app** en mode automatique :
+
+```bash
+./forge-bootstrap.sh my-app
+```
+
+Forcer un bootstrap depuis les templates locaux :
+
+```bash
+./forge-bootstrap.sh --local my-app
+```
+
+Mettre à jour les fichiers existants :
+
+```bash
+./forge-bootstrap.sh --update
+```
+
+Afficher l’aide :
+
+```bash
+./forge-bootstrap.sh --help
+```
+
+---
+
+## 🌍 Ouvert et personnalisable
+
+Forge est pensé pour être **léger mais extensible**.
+Chaque utilisateur peut décider de :
+
+* Ajouter ses propres **templates** (`templates/`) pour générer des projets adaptés à ses besoins (ex. web, microservices, scripts internes).
+* Créer des **modules** (`modules/`) pour enrichir Forge avec de nouvelles commandes ou automatisations.
+* Adapter le script principal `forge.sh` pour répondre à des usages spécifiques.
+* Utiliser les fichiers `lang/` pour localiser ou personnaliser les messages.
+
+En résumé : **Forge fournit le cadre, vous décidez des outils.**
+
+---
+
+## ✅ Pourquoi utiliser Forge ?
+
+* Gain de temps à chaque nouveau projet.
+* Standardisation de la structure de travail dans une équipe.
+* Simplicité : une seule commande pour tout initialiser.
+* Liberté totale d’adapter et d’étendre selon ses propres besoins.
+
+---
+
+👉 Forge est une **boîte à outils ouverte** : il offre un socle solide mais reste volontairement modulaire et personnalisable.
+Vous pouvez l’utiliser tel quel, ou l’enrichir selon vos pratiques de développement.
